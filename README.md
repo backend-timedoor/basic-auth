@@ -2,7 +2,9 @@
 
 ## Instalation 
 ### Install Package Via Composer
-```composer require timedoor/tmd-basic-auth```
+```
+composer require timedoor/tmd-basic-auth
+```
 
 Publish config
 ```
