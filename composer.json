@@ -1,5 +1,5 @@
 {
-    "name": "Timedoor/tmd-basic-auth",
+    "name": "timedoor/tmd-basic-auth",
     "description": "Basic auth timedoor",
     "type": "library",
     "license": "MIT",

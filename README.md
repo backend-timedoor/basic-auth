@@ -2,7 +2,7 @@
 
 ## Instalation 
 ### Install Package Via Composer
-`composer require shinedira/shine-swagger`
+`composer require timedoor/shine-swaggertmd-basic-auth`
 
 Publish config
 ```
