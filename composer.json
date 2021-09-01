@@ -22,5 +22,6 @@
                 "Timedoor\\TmdBSA\\TmdBasicAuthProvider"
             ]
         }
-    }
+    },
+    "prefer-stable": true
 }
