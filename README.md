@@ -24,9 +24,4 @@ Route::get('/', function () {
 })->middleware('tmd-bsa:admin,client');
 ```
 
-Run command
-```
-php artisan generate:api-docs
-```
-
 ## Thank You
