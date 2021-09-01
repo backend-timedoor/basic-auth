@@ -1,0 +1,26 @@
+{
+    "name": "Timedoor/tmd-basic-auth",
+    "description": "Basic auth timedoor",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Edwin Diradinata",
+            "email": "edwin@timedoor.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Timedoor\\TmdBSA\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Timedoor\\TmdBSA\\TmdBasicAuthProvider"
+            ]
+        }
+    }
+}
