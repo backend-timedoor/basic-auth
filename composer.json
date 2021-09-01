@@ -9,6 +9,8 @@
             "email": "edwin@timedoor.net"
         }
     ],
+    "version": "1.0.0",
+    "minimum-stability": "alpha",
     "require": {},
     "autoload": {
         "psr-4": {
