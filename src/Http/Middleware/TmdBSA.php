@@ -39,6 +39,9 @@ class TmdBSA
 
     private function attempt($request, $credential)
     {
+        if (config('tmd-bsa.debug_only') && !config('app.debug'))
+            return;
+
         if ($request->getUser() !== $credential['username'] || $request->getPassword() !== $credential['password']) {
             $headers = ['WWW-Authenticate' => 'Basic'];
 
