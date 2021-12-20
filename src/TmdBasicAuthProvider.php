@@ -13,7 +13,7 @@ class TmdBasicAuthProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '\config\tmd-basic-auth.php', 'tmd-bsa'
+            __DIR__ . '/config/tmd-basic-auth.php', 'tmd-bsa'
         );
     }
 
@@ -29,7 +29,7 @@ class TmdBasicAuthProvider extends ServiceProvider
     protected function registerPublishing()
     {
         $this->publishes([
-            __DIR__.'\config\tmd-basic-auth.php' => config_path('tmd-bsa.php'),
+            __DIR__.'/config/tmd-basic-auth.php' => config_path('tmd-bsa.php'),
         ], 'tmd-bsa');
     }
 }
