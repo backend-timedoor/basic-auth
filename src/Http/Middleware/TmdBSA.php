@@ -39,7 +39,7 @@ class TmdBSA
 
     private function attempt($request, $credential)
     {
-        if (config('tmd-bsa.debug_only') && !config('app.debug'))
+        if (config('tmd-bsa.env_local_only') && config('app.env') == 'production')
             return;
 
         if ($request->getUser() !== $credential['username'] || $request->getPassword() !== $credential['password']) {
