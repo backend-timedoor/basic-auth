@@ -19,7 +19,8 @@ class TmdBSA
     {
         if (!empty($providers)) {
             foreach ($providers as $provider) {
-                throw_if(! in_array($provider, array_keys(config('tmd-bsa'))),
+                throw_if(
+                    !in_array($provider, array_keys(config('tmd-bsa'))),
                     InvalidProviderException::class,
                     'Unregistered provider.'
                 );
@@ -41,6 +42,18 @@ class TmdBSA
     {
         if (config('tmd-bsa.env_local_only') && config('app.env') == 'production')
             return;
+
+        if (config('tmd-bsa.except')) {
+            foreach (config('tmd-bsa.except') as $except) {
+                if ($except !== '/') {
+                    $except = trim($except, '/');
+                }
+
+                if ($request->fullUrlIs($except) || $request->is($except)) {
+                    return;
+                }
+            }
+        }
 
         if ($request->getUser() !== $credential['username'] || $request->getPassword() !== $credential['password']) {
             $headers = ['WWW-Authenticate' => 'Basic'];

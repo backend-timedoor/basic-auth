@@ -6,6 +6,9 @@ return [
         'username' => env('TMD_BSA_USERNAME', 'admin'),
         'password' => env('TMD_BSA_PASSWORD', 'admin'),
     ],
+    'except' => [
+        // 'midtrans-notify'
+    ]
     // 'admin' => [
     //     'username' => 'newusername',
     //     'password' => 'newpassword',
